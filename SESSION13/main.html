@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="load(event)" style="text-align: center;">
+    <h1>Hello</h1>
+    <label for="">لطفا درمورد تابع دقت کنید</label>
+    <input type="text" onkeydown="keyPress(event)" onchange="inputChenger(event)">
+
+    <button onclick="clicked(event)">کلیک کنید</button>
+    <hr>
+    <div onmouseout="mouseOut(event)" onmouseover="mouseOver(event)" style="width: 300px; height: 300px;font-size: 30px;padding-top: 20px; background-color: red; color: yellow;"></div>
+    <script>
+        function inputChenger(event){
+            alert('سلام تست آنچین'+ event.target.value);
+            console.log(event);
+        }
+
+        function clicked(event){
+            alert('خوش آمدید.....');
+            console.log(event);
+        }
+        function mouseOver(event){
+            console.log(event);
+            event.target.innerHTML = "Hello";
+        }
+
+        function mouseOut(event){
+            console.log(event);
+            event.target.innerHTML = 'why you are gone!!!!!!?';
+        }
+        let persionChar = {
+            66: 'ذ'
+        }
+        function keyPress(event){
+            console.log(event);
+            event.target.value = persionChar[event.keyCode];
+        }
+        function load(event){
+            alert ('Hello to everyone');
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <h1>سلام به همه عزیزان جاوا اسکریپت کار</h1>
+    <label for="">نام:</label>
+    <input name="input" onchange="validate(event)">
+    <hr>
+    <script>
+        let text = "sedaqat 'ali' ";
+        let text1 = 'sedaqat "ali" ';
+
+        console.log(text.length);
+        console.log(text[3]);
+
+        function validate(event){
+            if(event.target.value.length < 3){
+                alert('نام وارد شده کمتر از سه کاراکتر هست');
+            }
+        }
+        let userInfo = "   hello to Everyone ....!!     ";
+        document.write(userInfo.toUpperCase()+"<br>");
+        document.write(userInfo.toLowerCase()+"<br>");
+        document.write(userInfo.indexOf("s")+"<br>");
+        document.write(userInfo.indexOf("o")+"<br>");
+        document.write(userInfo.includes("s")+"<br>");
+        document.write(userInfo.includes("e")+"<br>");
+        document.write(userInfo.slice(0,10)+"<br>");
+        document.write(userInfo.substr(0,15)+"<br>");
+        document.write(userInfo.replace("hello","hi")+"<br>");
+        document.write(userInfo.trim()+"<br>");
+        let write = "1,2,5,8,7";
+        let array = write.split(",");
+        document.write(array);
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
